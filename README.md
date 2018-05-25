@@ -13,3 +13,5 @@ The tools will utilize RPC commands to interact with the full node - wallet pass
 The tools are written in golang and are extendable to use python http servers (like tornado) to access python only libraries.
 
 The belief of the author is that most full-nodes are not in use most of the time.  When new block is transmitted it is validated by a full-node.  That means that 5-7 minutes of each cycle the node is not doing anything.  So why not utilze that CPU time for doing money-generating work.  Examples are utilizing Spacy for NLP, doing distributed calculations, and routing packets around the internet (think tor but not tor).
+
+curl -XPOST 192.168.0.22:8081/submit_process -d '{"process":{"process_name":"test123", "process_arguments":[{"arg1":"i am here"}]}}'
