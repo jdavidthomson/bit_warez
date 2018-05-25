@@ -21,11 +21,15 @@ func SubmitProcess(w http.ResponseWriter, r *http.Request){
 		panic(err)
 	}
 	defer r.Body.Close()
-	log.Println(process_json.Process["process_name"].(string))
+/*	log.Println(process_json.Process["process_name"].(string))
 	arguments := process_json.Process["process_arguments"].([]interface{})
 	for _, value := range arguments{
 		log.Println(value.(map[string]interface{}))
 	}
+*/
+	btc_address := GetNewAddress()
+	log.Println(btc_address)
+	json.NewEncoder(w).Encode(btc_address)
 }
 func PaidEndpoint(w http.ResponseWriter, r *http.Request){
 
