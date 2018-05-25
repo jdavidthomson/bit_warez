@@ -1,5 +1,5 @@
 # bit_warez
-warez build around bitcoin and its networking protocols
+warez built around bitcoin and its networking protocols
 
 The vision for bit_warez is to build warez supported by the bitcoin protocol.
 
